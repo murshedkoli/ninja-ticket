@@ -80,17 +80,17 @@ bookBtn.addEventListener("click", function () {
    var returnDate = document.getElementById("return").value;
 
    if (flayingFrom != "" &&
-         flayingTo != "" &&
-         departureDate != "" &&
-         returnDate != "" &&
-         getTotal != 0
-   ){
+      flayingTo != "" &&
+      departureDate != "" &&
+      returnDate != "" &&
+      getTotal != 0
+   ) {
 
-  printInfo();
-}
-else {
-   alert("Please Fill All Information");
-}
+      printInfo();
+   }
+   else {
+      alert("Please Fill All Information");
+   }
 });
 
 
@@ -132,10 +132,11 @@ function printInfo() {
 
 
 
-document.getElementById("printBtn").addEventListener("click", function(){
+document.getElementById("printBtn").addEventListener("click", function () {
    document.getElementById("menu").style.display = "none";
    document.getElementById("printBtnHide").style.display = "none";
    document.getElementById("thanks").style.display = "block";
+   document.getElementById("printHeading").style.display = "block";
    print();
 })
 
