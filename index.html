@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header id="menu" class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main id="bookInfo" class="main-content container">
+        <div class="booking-form">
+            <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input id="flayingFrom" class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input id="flayingTo" class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input id="departure" class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input id="return" class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input id="firstClassTicket" class="inp-style inp-width" type="number" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <span id="firstClassPlusBtn" class="btn-pm">+</span> <span id="firstClassMinusBtn" class="btn-pm">-</span>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input id="economyTicket" class="inp-style inp-width" type="number" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <span id="economyPlusBtn" class="btn-pm">+</span> <span id="economyMinusBtn" class="btn-pm">-</span>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="sutTotal">0</span></p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="taxPrice">0</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="finalPrice">0</span></p>
+                    </div>
+                </div>
+            </div>
+            <button id="bookNowBtn" class="btn-style">Book Now</button>
+        </div>
+
+        <div class="booking-content">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+        </div>
+
+
+
+
+    </main>
+
+    <section id="printInfo" class="print-details container">
+        <h2>Booking Information</h2>
+
+
+        <table>
+
+            <tr>
+              <td>Flaying From</td>
+              <td><span id="flayingFromText"></span></td>
+           
+            </tr>
+            <tr>
+              <td>Flaying To</td>
+              <td><span id="flayingToText"></span></td>
+          
+            </tr>
+            <tr>
+              <td>Departure Date</td>
+              <td><span id="departureDate"></span></td>
+            
+            </tr>
+            <tr>
+              <td>Return Date</td>
+              <td><span id="returnDate"></span></td>
+          
+            </tr>
+            <!-- <tr>
+              <td>Number of First Class Ticket</td>
+              <td><span id="noOfFirstClassTicket"></span></td>
+            
+            </tr>
+            <tr>
+              <td>Number of Economy Ticket</td>
+              <td><span id="noOfEconomyTicket"></span></td>
+          
+            </tr> -->
+
+            <tr>
+                <td>Price Of First Class Ticket (<span id="noOfFirstClassTicket"></span>)</td>
+                <td><span id="priceOfFirstClassTicket"></span></td>
+            
+              </tr>
+
+              <tr>
+                <td>Price Of Economy Ticket (<span id="noOfEconomyTicket"></span>)</td>
+                <td><span id="priceOfEconomyTicket"></span></td>
+            
+              </tr>
+
+              <tr>
+                <td>Subtotal</td>
+                <td><span id="subTotalTaka"></span></td>
+            
+              </tr>
+
+              <tr>
+                <td>Tax 10%</td>
+                <td><span id="taxTaka"></span></td>
+            
+              </tr>
+
+              
+              <tr>
+                <td>Total</td>
+                <td><span id="totalAmount"></span></td>
+            
+              </tr>
+              <tr id="printBtnHide">
+              <td>Print This Page</td>
+                <td><button id="printBtn" class="btn-style">Print</button></td>
+            </tr>
+          </table>
+
+          <h2 id="thanks" style="text-aling:cneter; margin-top: 50px;">Have a nice Journey, Thank you</h2>
+        
+    </section>
+
+    <!--Thank You-->
+
+    <script src="flying.js"></script>
+    
+</body>
+
+</html>
